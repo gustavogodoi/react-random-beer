@@ -7,7 +7,7 @@ const HeaderWapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 `;
 const HeaderText = styled.div`font-size: 36px;`;
 

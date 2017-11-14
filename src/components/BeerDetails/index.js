@@ -21,6 +21,10 @@ const BeerInfoWrapper = styled.div`
   max-width: 50%;
   padding: 50px 0 0 50px;
 `;
+const LoadingWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+`;
 
 const BeerDetails = ({ currentBeer, loadNewBeer }) => {
   const beerLabel = currentBeer.labels ? (
@@ -28,7 +32,7 @@ const BeerDetails = ({ currentBeer, loadNewBeer }) => {
   ) : null;
 
   if (!currentBeer.id) {
-    return <div>Loading...</div>;
+    return <LoadingWrapper>Loading...</LoadingWrapper>;
   }
 
   return (
