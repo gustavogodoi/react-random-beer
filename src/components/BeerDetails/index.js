@@ -23,7 +23,6 @@ const BeerInfoWrapper = styled.div`
 `;
 
 const BeerDetails = ({ currentBeer, loadNewBeer }) => {
-  console.log(currentBeer);
   const beerLabel = currentBeer.labels ? (
     <BeerLabelImg src={currentBeer.labels.medium} alt="" />
   ) : null;
