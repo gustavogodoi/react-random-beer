@@ -10,11 +10,13 @@ const BodyWrapper = styled.div`
 `;
 const BeerLabelWrapper = styled.div`
   flex: 1 1 auto;
-  max-width: 500%;
+  max-width: 100%;
+  display: flex;
 `;
 const BeerLabelImg = styled.img`
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  margin: auto;
 `;
 const BeerInfoWrapper = styled.div`
   flex: 1 1 auto;
