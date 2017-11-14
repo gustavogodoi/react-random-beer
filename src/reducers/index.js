@@ -14,6 +14,10 @@ const beer = (state = initialState, action) => {
         loading: false,
         currentBeer: action.result.currentBeer.data
       });
+    case actions.CLEAR_CURRENT_BEER:
+      return Object.assign({}, state, {
+        currentBeer: {}
+      });
     default:
       return state;
   }

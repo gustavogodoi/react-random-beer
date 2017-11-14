@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { loadBeerRequest } from "../../actions/";
+import { loadBeerRequest, clearCurrentBeer } from "../../actions/";
 import Header from "../Header";
 import BeerDetails from "../BeerDetails";
 
@@ -10,6 +10,7 @@ export class Home extends Component {
   }
 
   loadNewBeer = () => {
+    this.props.clearCurrentBeer();
     this.props.loadBeerRequest();
   };
 
@@ -31,7 +32,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  loadBeerRequest: () => dispatch(loadBeerRequest())
+  loadBeerRequest: () => dispatch(loadBeerRequest()),
+  clearCurrentBeer: () => dispatch(clearCurrentBeer())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

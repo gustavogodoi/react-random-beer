@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import { getBeer } from "../api/beerApi";
-import * as actions from "../actions/index";
+import * as actions from "../actions";
 
 export function* getBeerData({ params }) {
   try {
