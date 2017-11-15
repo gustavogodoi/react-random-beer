@@ -1,7 +1,8 @@
 import * as actions from "../actions";
 
 const initialState = {
-  currentBeer: [],
+  currentBeer: {},
+  list: [],
   loading: false
 };
 
@@ -17,6 +18,12 @@ const beer = (state = initialState, action) => {
     case actions.CLEAR_CURRENT_BEER:
       return Object.assign({}, state, {
         currentBeer: {}
+      });
+    case actions.LOAD_BEER_LIST:
+      const currentList = Object.assign([], state.list);
+      currentList.push(action.result.newBeer.data);
+      return Object.assign({}, state, {
+        list: currentList
       });
     default:
       return state;

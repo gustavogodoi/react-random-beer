@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loadBeerRequest, clearCurrentBeer } from "../../actions/";
-import Header from "../Header";
 import BeerDetails from "../BeerDetails";
 
 export class Home extends Component {
@@ -19,8 +18,6 @@ export class Home extends Component {
 
     return (
       <div>
-        <Header />
-
         <BeerDetails currentBeer={currentBeer} loadNewBeer={this.loadNewBeer} />
       </div>
     );
