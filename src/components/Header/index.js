@@ -1,5 +1,6 @@
 /*eslint-disable jsx-a11y/accessible-emoji */
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderWapper = styled.div`
@@ -9,12 +10,19 @@ const HeaderWapper = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `;
 const HeaderText = styled.div`font-size: 36px;`;
 
 const Header = () => (
   <HeaderWapper>
-    <HeaderText>Random Beer 🍺</HeaderText>
+    <HeaderText>
+      <Link to="/">Random Beer 🍺</Link>
+    </HeaderText>
   </HeaderWapper>
 );
 

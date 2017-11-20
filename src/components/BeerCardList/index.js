@@ -6,6 +6,7 @@ const ListWrapper = styled.div`
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 30px;
 `;
 
 const ListItem = styled.div`
@@ -24,6 +25,7 @@ const LoadMoreWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
 `;
 
 const LoadMoreBtn = styled.button`
@@ -43,16 +45,18 @@ const BeerCardList = ({ list, loadMore }) => {
   }
 
   return (
-    <ListWrapper>
-      {list.map(beer => (
-        <ListItem key={beer.id}>
-          <BeerCard key={beer.id} beer={beer} />
-        </ListItem>
-      ))}
+    <div>
+      <ListWrapper>
+        {list.map(beer => (
+          <ListItem key={beer.id}>
+            <BeerCard key={beer.id} beer={beer} />
+          </ListItem>
+        ))}
+      </ListWrapper>
       <LoadMoreWrapper>
         <LoadMoreBtn onClick={loadMore}>Load More Beers!</LoadMoreBtn>
       </LoadMoreWrapper>
-    </ListWrapper>
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const CardWrapper = styled.div`
@@ -44,6 +45,10 @@ const CardFieldset = styled.fieldset`
   padding: 0;
   margin: 0;
   border: 0;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const CardButton = styled.button`
@@ -72,7 +77,9 @@ const BeerCard = ({ beer }) => {
 
       <CardBody>
         <CardFieldset>
-          <CardButton type="button">Show More</CardButton>
+          <Link to={`/beer/${beer.id}`}>
+            <CardButton type="button">Show More</CardButton>
+          </Link>
         </CardFieldset>
       </CardBody>
     </CardWrapper>
