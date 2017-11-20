@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router";
-import Home from "../Home";
+import DetailsPage from "../DetailsPage";
 import Header from "../Header";
 import BeerList from "../BeerList";
 
@@ -11,7 +11,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={BeerList} />
-          <Route path="/beer/:id" component={Home} />
+          <Route path="/beer/:id?" component={DetailsPage} />
         </Switch>
       </div>
     );

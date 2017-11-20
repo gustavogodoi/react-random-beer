@@ -8,9 +8,6 @@ export class Home extends Component {
     this.props.loadBeerListRequest();
     this.props.loadBeerListRequest();
     this.props.loadBeerListRequest();
-    this.props.loadBeerListRequest();
-    this.props.loadBeerListRequest();
-    this.props.loadBeerListRequest();
   }
 
   loadMore = () => {
